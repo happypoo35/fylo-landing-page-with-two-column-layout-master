@@ -194,18 +194,3 @@ input {
     box-shadow: 0 0.125rem 0.5rem rgba(black, 0.2);
   }
 }
-
-form {
-  div {
-    position: relative;
-  }
-
-  label {
-    color: red;
-    font-size: 0.75rem;
-    position: absolute;
-    bottom: -1.25rem;
-    left: 0;
-    opacity: 0;
-  }
-}
