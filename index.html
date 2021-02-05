@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontend Mentor | Fylo landing page with two column layout</title>
+  </head>
+  <body>
+    <header class="pad">
+      <div class="header container">
+        <img src="./images/logo.svg" alt="Fylo Logo" class="logo" />
+        <nav role="navigation" class="header-nav">
+          <a href="#">Features</a>
+          <a href="#">Team</a>
+          <a href="#">Sign In</a>
+        </nav>
+      </div>
+      <section class="hero container" aria-label="Introduction">
+        <div class="hero-info">
+          <h1>All your files in one secure location, accessible anywhere.</h1>
+          <p class="pHero">
+            Fylo stores your most important files in one secure location. Access
+            them wherever you need, share and collaborate with friends, family,
+            and co-workers.
+          </p>
+          <form action="#" role="email form" class="fHero" id="fHero">
+            <div>
+              <input
+                type="email"
+                name="email_header"
+                class="inpHero"
+                role="email input"
+                placeholder="Enter your email..."
+                autocomplete="off"
+                required
+              />
+              <label for="email_header">Please check your email</label>
+            </div>
+            <button class="btn" id="bHero">Get&nbsp;Started</button>
+          </form>
+        </div>
+        <img src="./images/illustration-1.svg" alt="img" />
+      </section>
+    </header>
+    <main class="main">
+      <div class="pad">
+        <section class="productive container" aria-label="Stay productive">
+          <div class="productive-info">
+            <div class="text">
+              <h2>Stay productive, wherever you are</h2>
+              <p class="pProductive">
+                Never let location be an issue when accessing your files. Fylo
+                has you covered for all of your file storage needs.<br /><br />Securely
+                share files and folders with friends, family and colleagues for
+                live collaboration. No email attachments required!
+              </p>
+              <a href="#" class="inline-btn">
+                See how Fylo works<i class="fas fa-arrow-circle-right"></i>
+              </a>
+            </div>
+            <article class="testimonial" aria-label="testimonial">
+              <img src="./images/icon-quotes.svg" alt="img" />
+              <p class="pTestimonial">
+                Fylo has improved our team productivity by an order of
+                magnitude. Since making the switch our team has become a
+                well-oiled collaboration machine.
+              </p>
+              <div class="user">
+                <img src="./images/avatar-testimonial.jpg" alt="avatar" />
+                <div class="user-name">
+                  <span>Kyle Burton</span>
+                  <small>Founder & CEO, Huddle</small>
+                </div>
+              </div>
+            </article>
+          </div>
+          <img src="./images/illustration-2.svg" alt="img" class="img" />
+        </section>
+      </div>
+      <section class="cta pad" aria-label="Get early access">
+        <div class="container">
+          <div class="cta-info">
+            <h3>Get early access today</h3>
+            <p class="pCta">
+              It only takes a minute to sign up and our free starter tier is
+              extremely generous. If you have any questions, our support team
+              would be happy to help you.
+            </p>
+          </div>
+          <form action="#" role="email form" class="fCta">
+            <div>
+              <input
+                type="email"
+                name="email_footer"
+                class="inpCta"
+                role="email input"
+                placeholder="email@example.com"
+                autocomplete="off"
+              />
+              <label for="email_footer">Please check your email</label>
+            </div>
+            <button class="btn bCta" type="submit">Get Started For Free</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer pad">
+      <div class="container">
+        <img src="./images/logo-w.svg" alt="Fylo Logo" class="logo" />
+        <div class="footer-content">
+          <div class="contact">
+            <p class="pFooter">
+              <i class="fas fa-phone-alt"></i>Phone: +1-543-123-4567
+            </p>
+            <p class="pFooter">
+              <i class="fas fa-envelope"></i>example@fylo.com
+            </p>
+          </div>
+          <nav role="navigation" class="footer-nav">
+            <a href="#">About Us</a>
+            <a href="#">Jobs</a>
+            <a href="#">Press</a>
+            <a href="#">Blog</a>
+          </nav>
+          <nav role="navigation" class="footer-nav">
+            <a href="#">Contact Us</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+          </nav>
+          <div class="social">
+            <a href="#" aria-label="facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" aria-label="instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="./js/App.js"></script>
+</html>

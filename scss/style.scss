@@ -1,0 +1,303 @@
+@import "config";
+@import "global";
+
+header {
+  margin-bottom: clamp(7rem, 22vw, 19rem);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: clamp(1.5rem, 6vw, 4rem);
+  margin-bottom: 5.25rem;
+
+  .logo {
+    max-width: clamp(5rem, 20vw, 100%);
+  }
+
+  &-nav {
+    display: flex;
+    gap: clamp(1.5rem, 5vw, 3.5rem);
+
+    a {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 1px;
+        background: rgba($Very-Dark-Blue, 0.4);
+        @extend %tr;
+      }
+    }
+
+    a:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+
+    img {
+      max-width: min(500px, 100%);
+    }
+  }
+
+  &-info {
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    margin-bottom: 1.25rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    div {
+      width: min(20rem, 100%);
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+}
+
+main {
+  background: #f8f8fe;
+  position: relative;
+  padding-top: clamp(3rem, 10vw, 6rem);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: no-repeat bottom center/100%
+      url("../images/bg-curve-desktop.svg");
+    transform: translateY(calc(-100% + 1px));
+    pointer-events: none;
+  }
+}
+
+.productive {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  margin-bottom: 6.625rem;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .text {
+    margin-bottom: 2.75rem;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  h2 {
+    margin-bottom: 2.5rem;
+  }
+
+  .pProductive {
+    width: min(520px, 100%);
+    margin-bottom: 1rem;
+
+    @include tablet {
+      margin-bottom: 2.25rem;
+    }
+  }
+
+  .img {
+    margin-top: 2rem;
+
+    @include tablet {
+      max-width: min(500px, 100%);
+    }
+  }
+}
+
+.testimonial {
+  width: min(360px, 100%);
+  background: white;
+  padding: 1.625rem 2rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 0.125rem 1rem rgba(black, 0.05);
+
+  .user {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+    }
+
+    &-name {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.cta {
+  background: $Desaturated-Blue;
+  color: white;
+  padding-top: 6.625rem;
+  padding-bottom: 5.375rem;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 12vw, 10rem);
+    align-items: center;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      text-align: center;
+
+      form {
+        width: min(20rem, 100%);
+      }
+    }
+  }
+
+  &-info {
+    width: min(526px, 100%);
+  }
+
+  h3 {
+    margin-bottom: 1.25rem;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.footer {
+  background: $Very-Dark-Blue;
+  color: rgba(white, 0.8);
+  padding-top: clamp(4.125rem, 13vw, 6.75rem);
+  padding-bottom: clamp(2.875rem, 10vw, 4.25rem);
+
+  .logo {
+    width: 176px;
+    margin-bottom: 1.675rem;
+  }
+
+  &-content {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+    gap: 2rem;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  .pFooter {
+    margin-bottom: 1rem;
+
+    i {
+      margin-right: 1.125rem;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .social {
+    display: flex;
+    gap: 0.875rem;
+
+    @include mobile {
+      align-self: center;
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid rgba(white, 0.8);
+      border-radius: 50%;
+      @extend %tr;
+
+      &:hover {
+        border-color: lighten($Bright-Blue, 15%);
+
+        i {
+          color: lighten($Bright-Blue, 15%);
+        }
+      }
+
+      i {
+        font-size: 0.875rem;
+        @extend %tr;
+      }
+    }
+  }
+}

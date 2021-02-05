@@ -1,0 +1,211 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: $Very-Dark-Blue;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pad {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+// ----- Typography ----- //
+
+h1,
+h2,
+h3,
+button,
+span {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1rem, 4vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.125rem, 4vw, 2rem);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  &.pHero {
+    font-size: clamp(0.875rem, 3vw, 1.125rem);
+    color: $Desaturated-Blue;
+  }
+  &.pProductive {
+    font-size: clamp(0.875rem, 3vw, 1rem);
+  }
+  &.pTestimonial {
+    font-size: clamp(0.625rem, 2vw, 0.8125rem);
+    line-height: 1.9;
+    color: $Desaturated-Blue;
+  }
+  &.pCta {
+    font-size: clamp(0.875rem, 3vw, 1.0625rem);
+  }
+}
+
+.user-name {
+  span {
+    font-size: 0.6875rem;
+  }
+  small {
+    font-size: 0.5rem;
+  }
+}
+
+.header-nav {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
+}
+
+footer i {
+  color: white;
+}
+// ----- BTN ----- //
+
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  background: $Bright-Blue;
+  color: $Light-Grayish-Blue;
+  padding: 0.875rem 3.875rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(black, 0.2);
+  @extend %tr;
+
+  @include tablet {
+    width: min(20rem, 100%);
+  }
+
+  &:hover {
+    background: lighten($Bright-Blue, 10%);
+  }
+
+  &.bCta {
+    padding: 1rem 2.125rem;
+  }
+}
+
+.inline-btn {
+  color: $Moderate-Cyan;
+  border-bottom: 1px solid $Moderate-Cyan;
+  padding-bottom: 0.125rem;
+  font-size: clamp(0.75rem, 3vw, 1rem);
+  @extend %tr;
+
+  &:hover {
+    color: lighten($Moderate-Cyan, 15%);
+  }
+
+  i {
+    font-size: 0.875rem;
+    margin-left: 0.5rem;
+  }
+}
+
+nav a {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background: $Light-Gray;
+    @extend %tr;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+// ----- FORM ----- //
+
+input {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  letter-spacing: 0.03em;
+  border-radius: 0.25rem;
+  @extend %tr;
+
+  &::placeholder {
+    color: rgba(black, 0.4);
+  }
+
+  &.inpHero {
+    border: 1px solid rgba($Very-Dark-Blue, 0.5);
+    padding: 0.75rem 1.25rem;
+
+    &:invalid:not(:focus):not(:placeholder-shown) {
+      border: 1px solid red;
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px solid $Very-Dark-Blue;
+    }
+  }
+
+  &.inpCta {
+    border: none;
+    background: white;
+    padding: 0.875rem 1.25rem;
+    box-shadow: 0 0.125rem 0.5rem rgba(black, 0.2);
+  }
+}
+
+form {
+  div {
+    position: relative;
+  }
+
+  label {
+    color: red;
+    font-size: 0.75rem;
+    position: absolute;
+    bottom: -1.25rem;
+    left: 0;
+    opacity: 0;
+  }
+}
